@@ -1,0 +1,158 @@
+@font-face {
+  font-family: barcode;
+  src: url(./assets/LibreBarcode39Text-Regular.ttf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: #ccd7b6;
+}
+
+/*HEADER*/
+
+header {
+  background-color: #94be98;
+  height: 15vh;
+  margin: 3vh 3vw 10vh 3vw;
+  padding: 0vh 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: barcode;
+  font-size: 56px;
+}
+
+header a {
+  padding: 0px 3vw;
+  font-size: 24px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+main a,
+.review-title {
+  font-size: 24px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  padding: 3vh 3vw;
+  margin-top: 10vh;
+}
+
+/*BOOK IMAGE*/
+
+.book {
+  height: 65vh;
+  display: flex;
+}
+
+.book-img,
+.book-info {
+  margin: 3vh 3vw;
+}
+
+.book-img {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 100%;
+}
+
+/*BOOK INFO*/
+
+.book-info {
+  background-color: white;
+  width: 100%;
+  border: solid 3px #94be98;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-info h2,
+.book-year {
+  width: 50%;
+}
+
+.book-year {
+  justify-self: flex-end;
+}
+
+/*FORM*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3vw;
+}
+
+form .input-name,
+button {
+  height: 30px;
+  width: 10vw;
+  margin-bottom: 2vh;
+}
+
+form .input-review {
+  height: 150px;
+  margin-bottom: 2vh;
+  resize: none;
+}
+
+form button {
+  background-color: #94be98;
+  border: transparent;
+  text-transform: uppercase;
+  align-self: end;
+}
+
+/*REVIEWS*/
+
+.user-reviews {
+  margin: 0 3vw;
+}
+
+.user-reviews h2 {
+  background-color: #94be98;
+  width: 20vw;
+  margin: 2vh 0vw 0vh 0vw;
+}
+
+.user-reviews p {
+  background-color: white;
+  width: 40vw;
+  height: 15vh;
+  border: solid 3px #94be98;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: #94be98;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh 3vw 3vh 3vw;
+  padding: 0vh 3vw;
+}
+
+footer a {
+  font-family: barcode;
+  font-size: 56px;
+  color: black;
+}
+
+footer a:active {
+  color: #ccd7b6;
+}
+
+/*MEDIA QUERIES*/

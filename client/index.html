@@ -4,8 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="./app.js" defer></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!--header-->
+    <header>
+      <h1>book reviews</h1>
+      <div>
+        <a>genres</a>
+        <a>search</a>
+      </div>
+    </header>
+    <main>
+      <a>back to books</a>
+      <!--about book-->
+      <section class="book">
+        <div class="book-img">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9XUPz0tjKBZyLUUpHYsHK1kqnfGgX5NNnIQXHEatKow&s"
+            alt="the hobbit book cover"
+          />
+        </div>
+        <div class="book-info">
+          <h2>the hobbit</h2>
+          <h3 class="book-year">1937</h3>
+          <h3>j. r. r. tolkien</h3>
+          <h4>
+            In J.R.R. Tolkien's timeless classic, 'The Hobbit,' embark on an
+            epic adventure through the enchanting landscapes of Middle-earth.
+            Bilbo Baggins, a humble hobbit living a quiet life in the Shire, is
+            unexpectedly thrust into a journey of courage, discovery, and
+            self-discovery when the wise wizard Gandalf and a company of
+            thirteen dwarves arrive on his doorstep. Join Bilbo as he ventures
+            far from the comforts of home, encountering trolls, elves, goblins,
+            and a creature of unspeakable darkness known as Smaug the dragon.
+            Along the way, Bilbo discovers inner strengths he never knew he
+            possessed and forms unbreakable bonds of friendship. 'The Hobbit' is
+            a captivating tale of heroism, friendship, and the enduring power of
+            the human spirit. With its richly imagined world, unforgettable
+            characters, and timeless themes of bravery and redemption, this
+            beloved masterpiece continues to enchant readers of all ages and
+            inspire generations.
+          </h4>
+        </div>
+      </section>
+      <!--form-->
+      <p class="review-title">leave a review</p>
+      <section class="form">
+        <form id="message-form">
+          <label>Name</label>
+          <input class="input-name" name="name" placeholder="Name" />
+          <label>Review</label>
+          <textarea
+            class="input-review"
+            name="review"
+            placeholder="Write Your Review..."
+          ></textarea>
+          <button>Submit</button>
+        </form>
+      </section>
+      <!--reviews-->
+      <section>
+        <div class="user-reviews" id="booksWrapper"></div>
+      </section>
+    </main>
+    <!--footer-->
+    <footer>
+      <a href="https://github.com/splendidist" target="_blank">Lucy Holmes</a>
+    </footer>
+  </body>
 </html>

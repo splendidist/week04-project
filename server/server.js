@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import cors from "cors";
 
 const app = express();
@@ -13,7 +13,20 @@ app.get("/", function (req, res) {
 });
 
 app.get("/books", function (req, res) {
-  res.json("hello world");
+  const reviews = db.prepare("SELECT * FROM reviews").all();
+  res.json(reviews);
+});
+
+app.post("/message", function (req, res) {
+  const newMessage = req.body;
+  const { name, review } = newMessage;
+  db.prepare(
+    `
+  INSERT INTO reviews (name, review) VALUES (?, ?)
+`
+  ).run(name, review);
+  console.log(newMessage);
+  res.json(newMessage);
 });
 
 app.listen(8080, function () {
