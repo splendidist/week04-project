@@ -6,7 +6,8 @@ function handleSubmit(event) {
   const review = event.target.review.value;
   console.log({ name: name, review: review });
   event.target.reset(); //resets form after submitted
-  fetch("http://localhost:8080/message", {
+  fetch("https://week04-project.onrender.com/books", {
+    //this link needs to be https://week04-project.onrender.com/books or http://localhost:8080/books
     method: "POST",
     body: JSON.stringify({ name: name, review: review }),
     headers: { "Content-Type": "application/json" },
@@ -18,7 +19,7 @@ form.addEventListener("submit", handleSubmit);
 const booksWrapper = document.getElementById("booksWrapper");
 
 async function getBooks() {
-  const response = await fetch("http://localhost:8080/books");
+  const response = await fetch("https://week04-project.onrender.com/books"); //this link needs to behttps://week04-project.onrender.com/books or http://localhost:8080/books
   const books = await response.json();
 
   books.forEach(function (reviews) {
