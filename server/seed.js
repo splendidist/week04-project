@@ -17,14 +17,14 @@ INSERT INTO reviews (name, review) VALUES
 `);
 
 insertReview.run(
-  "Bilbo Baggins",
-  "A delightful adventure from start to finish! As the protagonist, I can assure you that 'The Hobbit' is a tale filled with bravery, friendship, and unexpected twists. From encountering trolls to outsmarting dragons, this book will take you on an unforgettable journey through Middle-earth. A must-read for any fellow hobbit or adventurer at heart!"
+  "Emily",
+  "🌸 Just whipped up a fresh batch of salads using my homegrown veggies! There's nothing quite like the taste of organic goodness straight from the garden. Who's up for a salad party at the Stardrop Saloon tonight? 🥗💫 #OrganicLiving #SaladParty #StardewLife"
 );
 insertReview.run(
-  "Gandalf the Grey",
-  "Ah, 'The Hobbit' is a captivating tale woven with magic and wonder. Tolkien's masterful storytelling transports readers into a world teeming with mythical creatures and epic quests. From the humble beginnings of a hobbit's hole to the vast halls of Erebor, the adventure unfolds with every turn of the page. Join Bilbo, Thorin, and company on an unforgettable expedition filled with danger and discovery."
+  "Shane",
+  "Ugh, another day, another shift at JojaMart. Can't wait to get home and crack open a cold one. Anyone else feel like the Joja grind is draining the life out of them? Need some serious Stardew Valley therapy ASAP. 🍺😩 #JojaMartBlues #StardewTherapy #IsItFridayYet"
 );
 insertReview.run(
-  "Thorin Oakenshield",
-  "A story of courage, loyalty, and reclaiming what is rightfully ours! 'The Hobbit' chronicles the epic journey of a reluctant hero who joins our company on a quest to reclaim the Lonely Mountain. Tolkien's vivid descriptions and rich world-building immerse readers in the struggles and triumphs of our quest. From battling goblins in the Misty Mountains to facing the fiery wrath of Smaug, this book captures the essence of true dwarven resilience. An epic tale worthy of remembrance in the halls of Erebor!"
+  "Haley",
+  "📸 Just captured the most stunning sunset over Pelican Town! Nature is truly the best artist. Thinking of starting a Stardew Valley photography club - who's in? 🌅📷 #NaturePhotography #SunsetVibes #PelicanTownBeauty"
 );

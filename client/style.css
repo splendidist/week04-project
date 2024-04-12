@@ -1,158 +1,171 @@
-@font-face {
-  font-family: barcode;
-  src: url(./assets/LibreBarcode39Text-Regular.ttf);
-}
-
 * {
   padding: 0px;
   margin: 0px;
 }
 
 body {
-  font-family: "Inconsolata", monospace;
-  background-color: #ccd7b6;
+  background: rgb(252, 208, 130);
+  background: linear-gradient(
+    0deg,
+    rgba(252, 208, 130, 1) 0%,
+    rgba(255, 190, 221, 1) 100%
+  );
+  font-family: VT323;
 }
 
 /*HEADER*/
 
 header {
-  background-color: #94be98;
-  height: 15vh;
-  margin: 3vh 3vw 10vh 3vw;
-  padding: 0vh 3vw;
+  height: 10vh;
+  padding: 5vh 5vw;
   display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 h1 {
-  font-family: barcode;
-  font-size: 56px;
+  font-size: 40px;
+  color: black;
 }
 
-header a {
-  padding: 0px 3vw;
-  font-size: 24px;
-  text-decoration: underline;
-  text-transform: uppercase;
-}
+/*ABOUT*/
 
-main a,
-.review-title {
-  font-size: 24px;
-  text-decoration: underline;
-  text-transform: uppercase;
-  padding: 3vh 3vw;
-  margin-top: 10vh;
-}
-
-/*BOOK IMAGE*/
-
-.book {
-  height: 65vh;
-  display: flex;
-}
-
-.book-img,
-.book-info {
-  margin: 3vh 3vw;
-}
-
-.book-img {
-  display: flex;
-  flex-direction: column;
-}
-
-img {
-  height: 100%;
-}
-
-/*BOOK INFO*/
-
-.book-info {
-  background-color: white;
-  width: 100%;
-  border: solid 3px #94be98;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.book-info h2,
-.book-year {
-  width: 50%;
-}
-
-.book-year {
-  justify-self: flex-end;
+h3 {
+  text-align: center;
+  padding: 8vh 18vw;
+  font-size: 22px;
 }
 
 /*FORM*/
 
+.cat-img {
+  height: 40vh;
+  width: auto;
+  padding-right: 5vw;
+}
+
+.form {
+  height: 42vh;
+  background-image: url("#");
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  margin: 0 3vw;
+  font-size: 20px;
 }
 
 form .input-name,
-button {
+form .input-review {
+  font-size: 16px;
+  border: 2px solid palevioletred;
+}
+
+form .input-name {
+  padding: 0px 1vw;
   height: 30px;
   width: 10vw;
-  margin-bottom: 2vh;
+}
+
+.seasons {
+  display: flex;
+  border: none;
+  margin: 1vh 0vw;
+  width: 13vw;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 form .input-review {
-  height: 150px;
+  padding: 1vh 1vw;
+  height: 20vh;
+  width: 35vw;
   margin-bottom: 2vh;
   resize: none;
 }
 
+/*submit button*/
+
 form button {
-  background-color: #94be98;
-  border: transparent;
-  text-transform: uppercase;
+  border: none;
+  color: white;
+  background-color: palevioletred;
+  width: 5vw;
+  padding: 0.5vh 0vw;
   align-self: end;
 }
 
-/*REVIEWS*/
-
-.user-reviews {
-  margin: 0 3vw;
+form button:hover {
+  cursor: pointer;
 }
 
-.user-reviews h2 {
-  background-color: #94be98;
-  width: 20vw;
-  margin: 2vh 0vw 0vh 0vw;
+form button:active {
+  transform: translateY(5px);
+  color: palevioletred;
+  background-color: white;
+}
+
+/*submissions*/
+
+h4 {
+  font-size: 24px;
+  text-decoration: underline;
+  margin-bottom: 5vh;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("#");
+  padding: 5vh 3vw;
+}
+
+.user-reviews h2,
+.user-reviews p {
+  color: black;
+  background-color: white;
+  width: 30vw;
+  padding: 2vh 1vw;
 }
 
 .user-reviews p {
-  background-color: white;
-  width: 40vw;
-  height: 15vh;
-  border: solid 3px #94be98;
+  margin-bottom: 5vh;
+  padding: 0vh 1vw 2vh 1vw;
+  font-size: 20px;
 }
 
 /*FOOTER*/
 
 footer {
-  background-color: #94be98;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10vh 3vw 3vh 3vw;
-  padding: 0vh 3vw;
 }
 
 footer a {
-  font-family: barcode;
-  font-size: 56px;
-  color: black;
+  font-size: 24px;
+  color: palevioletred;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer a:active {
-  color: #ccd7b6;
+  color: white;
 }
 
 /*MEDIA QUERIES*/

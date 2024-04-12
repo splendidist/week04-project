@@ -10,7 +10,7 @@ function handleSubmit(event) {
     //this link needs to be https://week04-project.onrender.com/books or http://localhost:8080/books
     method: "POST",
     body: JSON.stringify({ name: name, review: review }),
-    headers: { "Content-Type": "application/json" },
+    headers: { "content-type": "application/json" },
   });
 }
 

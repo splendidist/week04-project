@@ -17,7 +17,7 @@ app.get("/books", function (req, res) {
   res.json(reviews);
 });
 
-app.post("/message", function (req, res) {
+app.post("/books", function (req, res) {
   const newMessage = req.body;
   const { name, review } = newMessage;
   db.prepare(
