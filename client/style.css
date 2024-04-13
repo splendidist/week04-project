@@ -120,14 +120,13 @@ form button:active {
 h4 {
   font-size: 24px;
   text-decoration: underline;
-  margin-bottom: 5vh;
+  margin: 5vh 0vw;
 }
 
 .reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("#");
   padding: 5vh 3vw;
 }
 
@@ -136,13 +135,23 @@ h4 {
   color: black;
   background-color: white;
   width: 30vw;
+}
+
+.user-reviews h2 {
   padding: 2vh 1vw;
 }
 
 .user-reviews p {
-  margin-bottom: 5vh;
   padding: 0vh 1vw 2vh 1vw;
   font-size: 20px;
+}
+
+.emoji {
+  display: flex;
+}
+
+.status {
+  margin-bottom: 5vh;
 }
 
 /*FOOTER*/
