@@ -9,13 +9,13 @@ async function handleSubmit(event) {
   event.preventDefault();
   const name = event.target.name.value;
   const season = getSelectedSeason();
-  const review = event.target.review.value;
-  console.log({ name: name, season: season, review: review });
+  const status = event.target.status.value;
+  console.log({ name: name, season: season, status: status });
   event.target.reset(); //resets form after submitted
-  fetch("https://week04-project.onrender.com/books", {
-    //this link needs to be https://week04-project.onrender.com/books or http://localhost:8080/books
+  fetch("http://localhost:8080/submissions", {
+    //this link needs to be https://week04-project.onrender.com/submissions or http://localhost:8080/submission
     method: "POST",
-    body: JSON.stringify({ name: name, season: season, review: review }),
+    body: JSON.stringify({ name: name, season: season, status: status }),
     headers: { "content-type": "application/json" },
   });
   //makes submission appear on page without having to reload
@@ -28,22 +28,23 @@ async function handleSubmit(event) {
   likeBtn.setAttribute("class", "like-button");
   h2.textContent = name;
   s.textContent = season;
-  p.textContent = review;
+  p.textContent = status;
   likeBtn.textContent = "💖";
-  booksWrapper.appendChild(h2);
-  booksWrapper.appendChild(s);
-  booksWrapper.appendChild(p);
-  booksWrapper.appendChild(likeBtn);
+  statusWrapper.appendChild(h2);
+  statusWrapper.appendChild(s);
+  statusWrapper.appendChild(p);
+  statusWrapper.appendChild(likeBtn);
 }
 
-const booksWrapper = document.getElementById("booksWrapper");
+const statusWrapper = document.getElementById("statusWrapper");
 
-async function getBooks() {
-  const response = await fetch("https://week04-project.onrender.com/books"); //this link needs to be https://week04-project.onrender.com/books or http://localhost:8080/books
-  const books = await response.json();
-  booksWrapper.innerHTML = "";
+async function getSubmissions() {
+  const response = await fetch("http://localhost:8080/submissions");
+  //this link needs to be https://week04-project.onrender.com/submissions or http://localhost:8080/submissions
+  const status = await response.json();
+  statusWrapper.innerHTML = "";
 
-  books.forEach(function (reviews) {
+  status.forEach(function (submissions) {
     const h2 = document.createElement("h2");
     const s = document.createElement("p");
     const p = document.createElement("p");
@@ -51,14 +52,14 @@ async function getBooks() {
     s.setAttribute("class", "emoji");
     p.setAttribute("class", "status");
     likeBtn.setAttribute("class", "like-button");
-    h2.textContent = reviews.name;
-    s.textContent = reviews.season;
-    p.textContent = reviews.review;
+    h2.textContent = submissions.name;
+    s.textContent = submissions.season;
+    p.textContent = submissions.status;
     likeBtn.textContent = "💖";
-    booksWrapper.appendChild(h2);
-    booksWrapper.appendChild(s);
-    booksWrapper.appendChild(p);
-    booksWrapper.appendChild(likeBtn);
+    statusWrapper.appendChild(h2);
+    statusWrapper.appendChild(s);
+    statusWrapper.appendChild(p);
+    statusWrapper.appendChild(likeBtn);
   });
 }
 
@@ -78,4 +79,4 @@ function getSelectedSeason() {
 
 form.addEventListener("submit", handleSubmit);
 
-getBooks();
+getSubmissions();

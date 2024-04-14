@@ -12,19 +12,19 @@ app.get("/", function (req, res) {
   res.json("hello world");
 });
 
-app.get("/books", function (req, res) {
-  const reviews = db.prepare("SELECT * FROM reviews").all();
-  res.json(reviews);
+app.get("/submissions", function (req, res) {
+  const submissions = db.prepare("SELECT * FROM submissions").all();
+  res.json(submissions);
 });
 
-app.post("/books", function (req, res) {
+app.post("/submissions", function (req, res) {
   const newMessage = req.body;
-  const { name, season, review } = newMessage;
+  const { name, season, status } = newMessage;
   db.prepare(
     `
-  INSERT INTO reviews (name, season, review) VALUES (?, ?, ?)
+  INSERT INTO submissions (name, season, status) VALUES (?, ?, ?)
 `
-  ).run(name, season, review);
+  ).run(name, season, status);
   console.log(newMessage);
   res.json(newMessage);
 });

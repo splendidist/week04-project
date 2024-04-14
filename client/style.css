@@ -78,7 +78,7 @@ form {
 }
 
 form .input-name,
-form .input-review {
+form .input-status {
   font-size: 16px;
   border: 2px solid palevioletred;
   width: 80vw;
@@ -103,14 +103,14 @@ legend {
   justify-content: space-evenly;
 }
 
-form .input-review {
+form .input-status {
   padding: 1vh 1vw;
   height: 50vh;
   margin-bottom: 2vh;
   resize: none;
 }
 
-/*submit button*/
+/*SUBMIT BUTTON*/
 
 form button {
   border: none;
@@ -130,7 +130,7 @@ form button:active {
   background-color: white;
 }
 
-/*submissions*/
+/*SUBMISSIONS*/
 
 h4 {
   font-size: 24px;
@@ -138,24 +138,24 @@ h4 {
   margin: 10vh 0vw;
 }
 
-.reviews {
+.submissions {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.user-reviews h2,
-.user-reviews p {
+.user-submission h2,
+.user-submission p {
   color: black;
   background-color: white;
   width: 80vw;
 }
 
-.user-reviews h2 {
+.user-submission h2 {
   padding: 2vh 1vw 1vh 1vw;
 }
 
-.user-reviews p {
+.user-submission p {
   padding: 0vh 1vw 2vh 1vw;
   font-size: 20px;
 }
@@ -235,7 +235,7 @@ footer a:active {
   form .input-name {
     width: 20vw;
   }
-  form .input-review {
+  form .input-submission {
     width: 60vw;
     height: 30vh;
   }
@@ -251,8 +251,8 @@ footer a:active {
     height: 5vh;
     align-self: end;
   }
-  .user-reviews h2,
-  .user-reviews p {
+  .user-submission h2,
+  .user-submission p {
     width: 60vw;
   }
 }
@@ -261,8 +261,8 @@ footer a:active {
   .sunflower {
     height: 10vh;
   }
-  .user-reviews h2,
-  .user-reviews p {
+  .user-submission h2,
+  .user-submission p {
     width: 40vw;
   }
 }
@@ -290,15 +290,15 @@ footer a:active {
   form .input-name {
     width: 10vw;
   }
-  form .input-review {
+  form .input-status {
     width: 45vw;
     height: 25vh;
   }
   form button {
     width: 8vw;
   }
-  .user-reviews h2,
-  .user-reviews p {
+  .user-submission h2,
+  .user-submission p {
     width: 30vw;
   }
 }
