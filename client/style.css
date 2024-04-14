@@ -16,10 +16,10 @@ body {
 /*HEADER*/
 
 header {
-  height: 10vh;
-  padding: 5vh 5vw;
+  padding: 5vh 1vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -27,19 +27,32 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 32px;
   color: black;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.sunflower {
+  height: 5vh;
+  display: flex;
+  align-items: center;
 }
 
 /*ABOUT*/
 
 h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 8vh 18vw;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /*FORM*/
@@ -47,14 +60,12 @@ h3 {
 .cat-img {
   height: 40vh;
   width: auto;
-  padding-right: 5vw;
+  margin: 5vh 0px;
 }
 
 .form {
-  height: 42vh;
-  background-image: url("#");
-  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -62,6 +73,7 @@ h3 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 20px;
 }
 
@@ -69,12 +81,12 @@ form .input-name,
 form .input-review {
   font-size: 16px;
   border: 2px solid palevioletred;
+  width: 80vw;
 }
 
 form .input-name {
   padding: 0px 1vw;
   height: 30px;
-  width: 10vw;
 }
 
 .seasons {
@@ -88,8 +100,7 @@ form .input-name {
 
 form .input-review {
   padding: 1vh 1vw;
-  height: 20vh;
-  width: 35vw;
+  height: 50vh;
   margin-bottom: 2vh;
   resize: none;
 }
@@ -100,9 +111,8 @@ form button {
   border: none;
   color: white;
   background-color: palevioletred;
-  width: 5vw;
-  padding: 0.5vh 0vw;
-  align-self: end;
+  width: 30vw;
+  height: 8vh;
 }
 
 form button:hover {
@@ -120,25 +130,24 @@ form button:active {
 h4 {
   font-size: 24px;
   text-decoration: underline;
-  margin: 5vh 0vw;
+  margin: 10vh 0vw;
 }
 
 .reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 3vw;
 }
 
 .user-reviews h2,
 .user-reviews p {
   color: black;
   background-color: white;
-  width: 30vw;
+  width: 80vw;
 }
 
 .user-reviews h2 {
-  padding: 2vh 1vw;
+  padding: 2vh 1vw 1vh 1vw;
 }
 
 .user-reviews p {
@@ -146,12 +155,25 @@ h4 {
   font-size: 20px;
 }
 
-.emoji {
-  display: flex;
+.status {
+  margin-bottom: 1vh;
 }
 
-.status {
-  margin-bottom: 5vh;
+.like-button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 3vh;
+  background-color: transparent;
+  border: none;
+}
+
+.like-button:hover {
+  cursor: pointer;
+}
+
+.like-button:active {
+  transform: translateY(5px);
 }
 
 /*FOOTER*/
@@ -178,3 +200,97 @@ footer a:active {
 }
 
 /*MEDIA QUERIES*/
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    justify-content: space-around;
+  }
+  .sunflower {
+    height: 10vh;
+  }
+  h3 {
+    font-size: 20px;
+    height: 30vh;
+  }
+  .cat-img {
+    height: 30vh;
+    margin: 0px 5vw 0px 0px;
+  }
+  form {
+    align-items: start;
+    margin-top: 5vh;
+  }
+  .form {
+    flex-direction: row;
+  }
+  form .input-name {
+    width: 20vw;
+  }
+  form .input-review {
+    width: 60vw;
+    height: 30vh;
+  }
+  form button {
+    width: 10vw;
+    height: 5vh;
+    align-self: end;
+  }
+  .user-reviews h2,
+  .user-reviews p {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sunflower {
+    height: 10vh;
+  }
+  .user-reviews h2,
+  .user-reviews p {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 5vw;
+  }
+  .cat-img {
+    height: 35vh;
+    margin: 0px 10vw 0px 0px;
+  }
+  form .input-name {
+    width: 10vw;
+  }
+  form .input-review {
+    width: 45vw;
+    height: 25vh;
+  }
+  form button {
+    width: 5vw;
+    height: 5vh;
+    align-self: end;
+  }
+  .user-reviews h2,
+  .user-reviews p {
+    width: 30vw;
+  }
+}

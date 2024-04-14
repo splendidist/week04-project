@@ -22,14 +22,18 @@ async function handleSubmit(event) {
   const h2 = document.createElement("h2");
   const s = document.createElement("p");
   const p = document.createElement("p");
+  const likeBtn = document.createElement("button");
   s.setAttribute("class", "emoji");
   p.setAttribute("class", "status");
+  likeBtn.setAttribute("class", "like-button");
   h2.textContent = name;
   s.textContent = season;
   p.textContent = review;
+  likeBtn.textContent = "💖";
   booksWrapper.appendChild(h2);
   booksWrapper.appendChild(s);
   booksWrapper.appendChild(p);
+  booksWrapper.appendChild(likeBtn);
 }
 
 const booksWrapper = document.getElementById("booksWrapper");
@@ -43,14 +47,18 @@ async function getBooks() {
     const h2 = document.createElement("h2");
     const s = document.createElement("p");
     const p = document.createElement("p");
+    const likeBtn = document.createElement("button");
     s.setAttribute("class", "emoji");
     p.setAttribute("class", "status");
+    likeBtn.setAttribute("class", "like-button");
     h2.textContent = reviews.name;
     s.textContent = reviews.season;
     p.textContent = reviews.review;
+    likeBtn.textContent = "💖";
     booksWrapper.appendChild(h2);
     booksWrapper.appendChild(s);
     booksWrapper.appendChild(p);
+    booksWrapper.appendChild(likeBtn);
   });
 }
 
