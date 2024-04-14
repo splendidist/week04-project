@@ -53,6 +53,7 @@ h3 {
   justify-content: center;
   text-align: center;
   font-size: 18px;
+  padding: 0px 3vw;
 }
 
 /*FORM*/
@@ -138,6 +139,25 @@ h4 {
   margin: 10vh 0vw;
 }
 
+.user-season {
+  align-items: center;
+}
+
+.user-season-item {
+  margin: 1vh 0vw;
+  border: transparent;
+}
+
+select.user-season-item {
+  background-color: transparent;
+}
+
+input.user-season-item {
+  color: white;
+  background-color: palevioletred;
+  padding: 1vh 2vw;
+}
+
 .submissions {
   display: flex;
   flex-direction: column;
@@ -208,6 +228,12 @@ footer a:active {
   h3 {
     font-size: 24px;
   }
+  form {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 32px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -235,9 +261,12 @@ footer a:active {
   form .input-name {
     width: 20vw;
   }
-  form .input-submission {
+  form .input-name,
+  form .input-status {
     width: 60vw;
-    height: 30vh;
+  }
+  form .input-status {
+    height: 40vh;
   }
   legend {
     text-align: left;
@@ -250,6 +279,9 @@ footer a:active {
     width: 10vw;
     height: 5vh;
     align-self: end;
+  }
+  h4 {
+    font-size: 24px;
   }
   .user-submission h2,
   .user-submission p {
@@ -275,7 +307,7 @@ footer a:active {
     font-size: 24px;
   }
   h3 {
-    font-size: 20px;
+    font-size: 24px;
     height: 20vh;
     display: flex;
     align-items: center;
@@ -284,7 +316,7 @@ footer a:active {
     margin: 0px 5vw;
   }
   .cat-img {
-    height: 35vh;
+    height: 40vh;
     margin: 0px 10vw 0px 0px;
   }
   form .input-name {
@@ -297,8 +329,12 @@ footer a:active {
   form button {
     width: 8vw;
   }
+  h4 {
+    font-size: 32px;
+  }
   .user-submission h2,
   .user-submission p {
     width: 30vw;
+    font-size: 24px;
   }
 }

@@ -1,8 +1,6 @@
 import Database from "better-sqlite3";
 const db = new Database("database.db");
 
-//make database
-
 db.exec(`
 CREATE TABLE IF NOT EXISTS submissions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -12,8 +12,8 @@ async function handleSubmit(event) {
   const status = event.target.status.value;
   console.log({ name: name, season: season, status: status });
   event.target.reset(); //resets form after submitted
-  fetch("https://week04-project.onrender.com/submissions", {
-    //this link needs to be https://week04-project.onrender.com/submissions or http://localhost:8080/submission
+  fetch("http://localhost:8080/submissions", {
+    //this link needs to be https://week04-project.onrender.com/submissions or http://localhost:8080/submissions
     method: "POST",
     body: JSON.stringify({ name: name, season: season, status: status }),
     headers: { "content-type": "application/json" },
@@ -39,9 +39,7 @@ async function handleSubmit(event) {
 const statusWrapper = document.getElementById("statusWrapper");
 
 async function getSubmissions() {
-  const response = await fetch(
-    "https://week04-project.onrender.com/submissions"
-  );
+  const response = await fetch("http://localhost:8080/submissions");
   //this link needs to be https://week04-project.onrender.com/submissions or http://localhost:8080/submissions
   const status = await response.json();
   statusWrapper.innerHTML = "";
