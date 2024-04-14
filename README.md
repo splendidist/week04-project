@@ -30,7 +30,7 @@ Stretch goals
 
 🌱 What went really well and what could have gone better?
 
-- Making the client and server folders, making a database and form, and getting the form submission to put into the database went really well. Deploying the site to Render also went really well. I think the overall website design could have gone better, and reaching some of the stretch goals.
+- Making the client and server folders, making a database and form, and getting the form submission to put into the database went really well. Deploying the site to Render also went really well. I also used lighthouse to check the accessibilty of the website and used the results to make the app more accessibled. I think the overall website design could have gone better, and reaching some of the stretch goals.
 
 🌱 Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
 
@@ -39,6 +39,7 @@ Stretch goals
 - I sometimes look back on my old code to see how I've done things e.g. adding a custom font, media queries etc.
 - https://stackoverflow.com/questions/8287779/how-to-use-the-required-attribute-with-a-radio-input-field - how to use required
 - https://www.w3schools.com/jsref/met_element_setattribute.asp - set class attributes to elements made in JavaScript
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset - fieldset with legend element
 
 🌱 Describing errors or bugs you encountered while completing your assignment.
 
